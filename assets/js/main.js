@@ -100,6 +100,7 @@
       const alamat = String(data.get('alamat') || '').trim();
       const layanan = String(data.get('layanan') || '').trim();
       const durasi = String(data.get('durasi') || '').trim();
+      const terapis = String(data.get('terapis') || '').trim();
       const tanggalRaw = String(data.get('tanggal') || '');
       const waktu = String(data.get('waktu') || '').trim();
       const catatan = String(data.get('catatan') || '').trim();
@@ -114,6 +115,7 @@
         `Nama: ${nama}`,
         `Layanan: ${layanan}`,
         `Durasi: ${durasi}`,
+        `Terapis: ${terapis}`,
         `Tanggal: ${tanggal}`,
         `Waktu: ${waktu} WIB`,
         `Alamat: ${alamat}`,
