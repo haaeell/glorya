@@ -64,6 +64,7 @@
       const hash = link.getAttribute('href');
       if (!hash || hash === '#') return;
       event.preventDefault();
+      setMenu(false);
       scrollToSection(hash, true);
     });
   });
@@ -87,6 +88,43 @@
       openWhatsApp(message || DEFAULT_MESSAGE);
     });
   });
+
+  const bookingForm = document.getElementById('booking-form');
+  if (bookingForm) {
+    bookingForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      if (!bookingForm.reportValidity()) return;
+
+      const data = new FormData(bookingForm);
+      const nama = String(data.get('nama') || '').trim();
+      const alamat = String(data.get('alamat') || '').trim();
+      const layanan = String(data.get('layanan') || '').trim();
+      const durasi = String(data.get('durasi') || '').trim();
+      const tanggalRaw = String(data.get('tanggal') || '');
+      const waktu = String(data.get('waktu') || '').trim();
+      const catatan = String(data.get('catatan') || '').trim();
+
+      const tanggal = tanggalRaw
+        ? new Date(`${tanggalRaw}T00:00:00`).toLocaleDateString('id-ID', { day: '2-digit', month: 'long', year: 'numeric' })
+        : '';
+
+      const message = [
+        'Halo Glorya Massage, saya ingin booking:',
+        '',
+        `Nama: ${nama}`,
+        `Layanan: ${layanan}`,
+        `Durasi: ${durasi}`,
+        `Tanggal: ${tanggal}`,
+        `Waktu: ${waktu} WIB`,
+        `Alamat: ${alamat}`,
+        `Catatan: ${catatan || '-'}`,
+        '',
+        'Mohon konfirmasi jadwalnya. Terima kasih.'
+      ].join('\n');
+
+      openWhatsApp(message);
+    });
+  }
 
   document.querySelectorAll('.faq-button').forEach((button) => {
     button.addEventListener('click', () => {

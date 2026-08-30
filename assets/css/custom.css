@@ -80,6 +80,20 @@ a, button { transition: color .25s ease, background-color .25s ease, border-colo
 .ornament-prambanan::before { inset: 0 0 auto; height: 430px; opacity: .26; background-image: linear-gradient(180deg,rgba(8,8,8,.15),#080808 96%),url('../images/ornaments/prambanan.webp'); background-position: center top; background-size: cover; -webkit-mask-image: linear-gradient(180deg,#000 0%,#000 45%,transparent 100%); mask-image: linear-gradient(180deg,#000 0%,#000 45%,transparent 100%); }
 .ornament-pendopo::before { inset: auto 0 0; height: 300px; opacity: .36; background-image: linear-gradient(180deg,#080808 0%,rgba(8,8,8,.12) 44%,#080808 100%),url('../images/ornaments/pendopo-tugu.webp'); background-position: center; background-size: cover; -webkit-mask-image: linear-gradient(180deg,transparent 0%,#000 28%,#000 82%,transparent 100%); mask-image: linear-gradient(180deg,transparent 0%,#000 28%,#000 82%,transparent 100%); }
 .ornament-merapi::before { inset: 0; opacity: .26; background-image: linear-gradient(90deg,rgba(13,13,13,.7),rgba(13,13,13,.15),rgba(13,13,13,.64)),linear-gradient(180deg,#0d0d0d 0%,transparent 28%,transparent 72%,#0d0d0d 100%),url('../images/ornaments/merapi-tugu-wayang.webp'); background-position: center; background-size: cover; }
+.booking-card { position: relative; display: flex; flex-direction: column; gap: 1.25rem; overflow: hidden; border: 1px solid rgba(212,175,55,.25); border-radius: 1.25rem; background: radial-gradient(circle at 0 0,rgba(212,175,55,.06),transparent 40%),linear-gradient(145deg,#141414,#0e0e0e); padding: 2rem; box-shadow: 0 25px 60px rgba(0,0,0,.35); }
+.booking-card::before { content: ''; position: absolute; inset: 0 0 auto; height: 3px; background: linear-gradient(90deg,#9f741d,#f0d98a 50%,#9f741d); }
+.form-grid { display: grid; gap: 1.25rem; }
+.form-field { display: flex; flex-direction: column; gap: .55rem; }
+.form-field label { font-size: .65rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: #D4AF37; }
+.form-field input, .form-field select, .form-field textarea { width: 100%; min-height: 48px; border: 1px solid rgba(255,255,255,.1); border-radius: .6rem; background: rgba(255,255,255,.03); padding: .8rem 1rem; font-size: .85rem; color: #F8F5ED; font-family: inherit; }
+.form-field input::placeholder, .form-field textarea::placeholder { color: #6b6660; }
+.form-field input:focus, .form-field select:focus, .form-field textarea:focus { outline: none; border-color: rgba(212,175,55,.55); background: rgba(212,175,55,.05); }
+.form-field select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23D4AF37' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.4rem; }
+.form-field select option { background: #141414; color: #F8F5ED; }
+.form-field input[type=date], .form-field input[type=time] { color-scheme: dark; }
+.form-field textarea { min-height: 92px; resize: vertical; }
+.booking-card > .btn-gold { margin-top: .25rem; }
+@media (min-width:640px){ .form-grid { grid-template-columns: 1fr 1fr; } .booking-card { padding: 2.5rem; } }
 .pill { border: 1px solid rgba(212,175,55,.25); border-radius: 999px; padding: .65rem 1rem; color: #E5C56A; font-size: .7rem; }
 .area-card { display: flex; min-height: 112px; align-items: center; gap: 1rem; border: 1px solid rgba(255,255,255,.08); background: rgba(18,18,18,.8); padding: 1.25rem; }
 .area-card > span { color: #D4AF37; font-family: 'Cormorant Garamond',serif; font-size: 1.2rem; }

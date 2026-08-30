@@ -132,10 +132,10 @@
 
       <div class="hidden items-center gap-7 lg:flex">
         <a class="nav-link" href="#home">Home</a><a class="nav-link" href="#tentang">Tentang</a>
-        <a class="nav-link" href="#treatment">Treatment</a><a class="nav-link" href="#keunggulan">Keunggulan</a>
+        <a class="nav-link" href="#treatment">Treatment</a><a class="nav-link" href="#keunggulan">Keunggulan</a><a class="nav-link" href="#booking">Booking</a>
         <a class="nav-link" href="#area-layanan">Area Layanan</a><a class="nav-link" href="#faq">FAQ</a>
       </div>
-      <button type="button" class="wa-trigger btn-gold hidden lg:inline-flex" data-message="Halo Glorya Massage, saya ingin booking layanan pijat panggilan di Jogja. Mohon info jadwal yang tersedia.">Booking WhatsApp</button>
+      <a href="#booking" class="btn-gold hidden lg:inline-flex">Booking Sekarang</a>
       <button id="menu-toggle" type="button" class="grid h-11 w-11 place-items-center rounded-full border border-white/10 text-glorya-cream lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Buka menu navigasi">
         <svg id="menu-icon" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/></svg>
       </button>
@@ -144,9 +144,9 @@
       <div class="flex flex-col py-4">
         <a class="mobile-nav-link" href="#home">Home</a><a class="mobile-nav-link" href="#tentang">Tentang</a>
         <a class="mobile-nav-link" href="#treatment">Treatment</a><a class="mobile-nav-link" href="#keunggulan">Keunggulan</a>
-        <a class="mobile-nav-link" href="#cara-booking">Cara Booking</a><a class="mobile-nav-link" href="#area-layanan">Area Layanan</a>
+        <a class="mobile-nav-link" href="#cara-booking">Cara Booking</a><a class="mobile-nav-link" href="#booking">Booking</a><a class="mobile-nav-link" href="#area-layanan">Area Layanan</a>
         <a class="mobile-nav-link" href="#testimoni">Testimoni</a><a class="mobile-nav-link" href="#faq">FAQ</a>
-        <button type="button" class="wa-trigger btn-gold mt-3 w-full" data-message="Halo Glorya Massage, saya ingin booking layanan pijat panggilan di Jogja. Mohon info jadwal yang tersedia.">Booking WhatsApp</button>
+        <a href="#booking" class="btn-gold mt-3 w-full">Booking Sekarang</a>
       </div>
     </div>
   </header>
@@ -238,6 +238,44 @@
           <li class="step-card reveal"><span>03</span><h3>Konfirmasi Booking</h3><p>Informasikan waktu dan lokasi kedatangan.</p></li>
           <li class="step-card reveal"><span>04</span><h3>Terapis Datang</h3><p>Terapis pria datang sesuai jadwal yang disepakati.</p></li>
         </ol>
+      </div>
+    </section>
+
+    <section id="booking" class="section-shell border-t border-white/[.06] bg-glorya-dark">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+        <div class="reveal mx-auto max-w-2xl text-center"><span class="eyebrow justify-center">Booking Sekarang</span><h2 class="section-title">Isi Form, <span class="text-glorya-lightGold">Kami Konfirmasi via WhatsApp</span></h2><p class="section-copy mx-auto">Lengkapi detail booking Anda, tim kami akan menghubungi melalui WhatsApp untuk konfirmasi jadwal dan lokasi.</p></div>
+        <form id="booking-form" class="booking-card reveal mx-auto mt-14 max-w-2xl" novalidate>
+          <div class="form-field"><label for="bk-nama">Nama</label><input id="bk-nama" name="nama" type="text" placeholder="Nama Anda" autocomplete="name" required></div>
+          <div class="form-field"><label for="bk-alamat">Alamat Lengkap</label><input id="bk-alamat" name="alamat" type="text" placeholder="Hotel, villa, rumah, atau apartemen" autocomplete="street-address" required></div>
+          <div class="form-grid">
+            <div class="form-field"><label for="bk-layanan">Layanan</label><select id="bk-layanan" name="layanan" required>
+              <option value="" disabled selected>Pilih layanan</option>
+              <option>Java Massage</option>
+              <option>Massage Kombinasi</option>
+              <option>Neck & Shoulder Massage</option>
+              <option>Massage Refleksi</option>
+              <option>Massage Kerik</option>
+              <option>Massage Scrub / Lulur</option>
+              <option>Deep Tissue Massage</option>
+              <option>Massage Bekam</option>
+              <option>Thai Massage</option>
+            </select></div>
+            <div class="form-field"><label for="bk-durasi">Durasi</label><select id="bk-durasi" name="durasi" required>
+              <option value="" disabled selected>Pilih durasi</option>
+              <option>60 menit</option>
+              <option>90 menit</option>
+              <option>120 menit</option>
+              <option>150 menit</option>
+              <option>180 menit</option>
+            </select></div>
+          </div>
+          <div class="form-grid">
+            <div class="form-field"><label for="bk-tanggal">Tanggal</label><input id="bk-tanggal" name="tanggal" type="date" required></div>
+            <div class="form-field"><label for="bk-waktu">Waktu</label><input id="bk-waktu" name="waktu" type="time" required></div>
+          </div>
+          <div class="form-field"><label for="bk-catatan">Catatan</label><textarea id="bk-catatan" name="catatan" rows="3" placeholder="Patokan lokasi, nomor kamar, dsb (opsional)"></textarea></div>
+          <button type="submit" class="btn-gold w-full">Kirim Booking via WhatsApp</button>
+        </form>
       </div>
     </section>
 
