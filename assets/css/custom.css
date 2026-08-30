@@ -37,7 +37,12 @@ a, button { transition: color .25s ease, background-color .25s ease, border-colo
 .about-image-overlay { background: linear-gradient(180deg,rgba(8,8,8,.04) 35%,rgba(8,8,8,.18) 62%,rgba(8,8,8,.9) 100%),linear-gradient(90deg,rgba(8,8,8,.12),transparent 35%,transparent 70%,rgba(8,8,8,.12)); }
 .location-chip { display: flex; min-height: 44px; align-items: center; gap: .6rem; border-bottom: 1px solid rgba(255,255,255,.1); color: #B6B0A4; font-size: .8rem; }
 .location-chip::before { content: '◆'; color: #D4AF37; font-size: .45rem; }
-.treatment-card { position: relative; display: flex; min-height: 420px; flex-direction: column; overflow: hidden; border: 1px solid rgba(255,255,255,.08); background: linear-gradient(145deg,#141414,#0e0e0e); padding: 2rem; }
+.treatment-card { position: relative; display: flex; min-height: 420px; flex-direction: column; overflow: hidden; isolation: isolate; border: 1px solid rgba(255,255,255,.08); background: linear-gradient(145deg,#141414,#0e0e0e); padding: 2rem; }
+.card-ornament-emblem, .card-ornament-filigri, .card-ornament-tugu { position: absolute; pointer-events: none; background-repeat: no-repeat; background-position: center; background-size: contain; }
+.card-ornament-emblem { z-index: -1; right: -1.25rem; bottom: -1.25rem; width: 8.5rem; height: 8.5rem; opacity: .05; background-image: url('../images/ornaments/emblem_gunungan_emas_mewah.webp'); }
+.card-ornament-filigri { z-index: -1; left: -1rem; bottom: -1rem; width: 5.5rem; height: 5.5rem; opacity: .06; transform: rotate(-8deg); background-image: url('../images/ornaments/ornamen_filigri_emas_batik_diagonal.webp'); }
+.card-ornament-tugu { z-index: 1; right: 3.7rem; top: 1.15rem; width: 1.5rem; height: 1.5rem; opacity: .07; background-image: url('../images/ornaments/lambang_emas_tugu_yogyakarta.webp'); }
+.btn-card-book { margin-top: 1.25rem; width: 100%; padding: .75rem 1.2rem; font-size: .72rem; }
 .treatment-card::before { content: ''; position: absolute; top: 0; left: 2rem; width: 3rem; height: 1px; background: #D4AF37; transition: width .35s ease; }
 .treatment-card:hover { border-color: rgba(212,175,55,.3); transform: translateY(-3px); box-shadow: 0 18px 45px rgba(0,0,0,.28); }
 .treatment-card:hover::before { width: calc(100% - 4rem); }

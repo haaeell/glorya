@@ -77,12 +77,14 @@
 
   document.querySelectorAll('.wa-trigger').forEach((button) => {
     button.addEventListener('click', () => {
-      const message = button.dataset.message || (
-        button.dataset.service
-          ? `Halo Glorya Massage, saya ingin booking ${button.dataset.service} ${button.dataset.duration} (${button.dataset.price}). Mohon info jadwal yang tersedia.`
-          : DEFAULT_MESSAGE
-      );
-      openWhatsApp(message);
+      let message = button.dataset.message;
+      if (!message && button.dataset.service) {
+        const detail = button.dataset.duration
+          ? ` ${button.dataset.duration}${button.dataset.price ? ` (${button.dataset.price})` : ''}`
+          : '';
+        message = `Halo Glorya Massage, saya ingin booking ${button.dataset.service}${detail}. Mohon info jadwal yang tersedia.`;
+      }
+      openWhatsApp(message || DEFAULT_MESSAGE);
     });
   });
 
