@@ -18,6 +18,7 @@
   const header = document.getElementById('site-header');
   const menuToggle = document.getElementById('menu-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
+  const HEADER_HEIGHT = 76;
 
   function setMenu(open) {
     menuToggle.setAttribute('aria-expanded', String(open));
@@ -48,7 +49,7 @@
     const target = document.querySelector(hash);
     if (!target) return;
 
-    const top = target.getBoundingClientRect().top + window.scrollY - header.offsetHeight;
+    const top = target.getBoundingClientRect().top + window.scrollY - HEADER_HEIGHT;
     window.scrollTo({
       top: Math.max(0, top),
       behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'

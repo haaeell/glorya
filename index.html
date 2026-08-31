@@ -14,7 +14,8 @@
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
-  <link rel="preload" as="image" href="assets/images/hero-massage-spa.webp" type="image/webp" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/images/hero-massage-spa-mobile.webp" type="image/webp" media="(max-width: 767px)" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/images/hero-massage-spa.webp" type="image/webp" media="(min-width: 768px)" fetchpriority="high">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Jasa Pijat Panggilan Jogja 24 Jam | Glorya Massage">
@@ -31,11 +32,12 @@
   <meta name="twitter:description" content="Massage panggilan 24 jam dengan pilihan terapis pria dan wanita serta gratis transport di seluruh Yogyakarta.">
   <meta name="twitter:image" content="https://gloryamassage.com/assets/images/og-glorya.jpg">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/tailwind.css">
-  <link rel="stylesheet" href="assets/css/custom.css">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;display=optional" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;display=optional">
+  </noscript>
   <script src="assets/js/main.js" defer></script>
 
   <script type="application/ld+json">
@@ -121,7 +123,7 @@
   <header id="site-header" class="fixed inset-x-0 top-0 z-50 border-b border-transparent transition-all duration-300">
     <nav class="mx-auto flex h-[76px] max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10" aria-label="Navigasi utama">
       <a href="#home" class="logo-mark group flex min-h-11 items-center gap-3" aria-label="Glorya Massage - Beranda">
-        <img src="assets/images/logo-glorya.png" width="48" height="48" class="h-10 w-10 object-contain transition-transform duration-300 group-hover:scale-105" alt="" fetchpriority="high">
+        <img src="assets/images/logo-glorya-96.webp" width="48" height="48" class="h-10 w-10 object-contain transition-transform duration-300 group-hover:scale-105" alt="" fetchpriority="high">
         <span class="leading-none"><span class="block font-display text-xl font-semibold tracking-[.18em]">GLORYA</span><span class="mt-1 block text-[8px] tracking-[.42em] text-glorya-soft">MASSAGE</span></span>
       </a>
 
@@ -148,7 +150,10 @@
 
   <main id="main-content">
     <section id="home" class="hero-pattern relative flex min-h-[100svh] items-center overflow-hidden pt-[76px]">
-      <img src="assets/images/hero-massage-spa.webp" class="hero-image absolute inset-0 h-full w-full object-cover" width="1448" height="1086" alt="Terapis Glorya Massage memberikan pijat panggilan di Yogyakarta" fetchpriority="high" decoding="async">
+      <picture>
+        <source srcset="assets/images/hero-massage-spa-mobile.webp" media="(max-width: 767px)" type="image/webp">
+        <img src="assets/images/hero-massage-spa.webp" class="hero-image absolute inset-0 h-full w-full object-cover" width="1448" height="1086" alt="Terapis Glorya Massage memberikan pijat panggilan di Yogyakarta" fetchpriority="high" decoding="async">
+      </picture>
       <div class="relative z-10 mx-auto w-full max-w-7xl px-5 py-10 sm:px-8 sm:py-12 lg:px-10 lg:py-8">
         <div class="max-w-4xl">
           <div class="reveal mb-5 flex items-center gap-4 text-[10px] font-semibold tracking-[.25em] text-glorya-lightGold sm:text-xs"><span class="h-px w-10 bg-glorya-gold"></span>PIJAT PANGGILAN • YOGYAKARTA • 24 JAM</div>
@@ -171,7 +176,7 @@
     <section id="tentang" class="section-shell jogja-ornament ornament-keraton border-t border-white/[.06] bg-glorya-dark">
       <div class="mx-auto grid max-w-7xl gap-14 px-5 sm:px-8 lg:grid-cols-[.9fr_1.1fr] lg:items-center lg:px-10">
         <div class="reveal relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-t-[10rem] border border-glorya-gold/20 bg-[#10100f]">
-          <img src="assets/images/about-glorya.webp" width="1122" height="1402" class="absolute inset-0 h-full w-full object-cover object-center" alt="Terapis Glorya Massage datang membawa perlengkapan massage" loading="lazy" decoding="async">
+          <img src="assets/images/about-glorya-640.webp" srcset="assets/images/about-glorya-640.webp 640w, assets/images/about-glorya-768.webp 768w, assets/images/about-glorya-1024.webp 1024w" sizes="(min-width: 1024px) 448px, (min-width: 640px) 448px, calc(100vw - 40px)" width="640" height="800" class="absolute inset-0 h-full w-full object-cover object-center" alt="Terapis Glorya Massage datang membawa perlengkapan massage" loading="lazy" decoding="async">
           <div class="about-image-overlay absolute inset-0" aria-hidden="true"></div>
           <div class="absolute bottom-7 left-7 right-7 border-l border-glorya-gold/60 pl-4"><span class="block font-display text-3xl text-glorya-champagne">At your place,</span><span class="text-xs tracking-[.22em] text-glorya-soft">AT YOUR PACE</span></div>
         </div>
@@ -323,7 +328,7 @@
     <section class="final-cta relative overflow-hidden border-b border-glorya-gold/20">
       <div class="cta-orb" aria-hidden="true"></div>
       <div class="relative mx-auto max-w-4xl px-5 py-24 text-center sm:px-8 sm:py-32">
-        <img src="assets/images/logo-glorya.png" width="72" height="72" class="mx-auto mb-6 h-16 w-16 object-contain" alt="" loading="lazy" decoding="async">
+        <img src="assets/images/logo-glorya-144.webp" width="72" height="72" class="mx-auto mb-6 h-16 w-16 object-contain" alt="" loading="lazy" decoding="async">
         <h2 class="font-display text-5xl font-semibold leading-none sm:text-7xl">Saatnya Memberikan Waktu <span class="text-glorya-lightGold">untuk Tubuh Anda</span></h2>
         <p class="mx-auto mt-6 max-w-xl leading-8 text-glorya-soft">Nikmati layanan massage panggilan 24 jam langsung di lokasi Anda bersama Glorya Massage.</p>
         <button type="button" class="wa-trigger btn-gold mx-auto mt-9" data-message="Halo Glorya Massage, saya ingin booking layanan pijat panggilan di Jogja. Mohon info jadwal yang tersedia.">Booking via WhatsApp</button>
@@ -335,7 +340,7 @@
   <footer class="bg-[#050505] pb-28 pt-16 sm:pb-16">
     <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
       <div class="grid gap-10 border-b border-white/10 pb-12 md:grid-cols-[1.4fr_.7fr_1fr]">
-        <div><a href="#home" class="inline-flex items-center gap-3 font-display text-2xl tracking-[.18em]"><img src="assets/images/logo-glorya.png" width="44" height="44" class="h-11 w-11 object-contain" alt="" loading="lazy" decoding="async">GLORYA MASSAGE</a><p class="mt-5 max-w-md text-sm leading-7 text-glorya-muted">Jasa pijat panggilan Jogja 24 jam dengan pilihan terapis pria dan wanita serta gratis transport untuk area Yogyakarta.</p></div>
+        <div><a href="#home" class="inline-flex items-center gap-3 font-display text-2xl tracking-[.18em]"><img src="assets/images/logo-glorya-96.webp" width="44" height="44" class="h-11 w-11 object-contain" alt="" loading="lazy" decoding="async">GLORYA MASSAGE</a><p class="mt-5 max-w-md text-sm leading-7 text-glorya-muted">Jasa pijat panggilan Jogja 24 jam dengan pilihan terapis pria dan wanita serta gratis transport untuk area Yogyakarta.</p></div>
         <div><h2 class="footer-title">Menu</h2><div class="mt-4 grid gap-3 text-sm text-glorya-soft"><a href="#home">Home</a><a href="#tentang">Tentang</a><a href="#treatment">Treatment</a><a href="#area-layanan">Area Layanan</a><a href="#faq">FAQ</a></div></div>
         <div><h2 class="footer-title">Hubungi Kami</h2><div class="mt-4 grid gap-3 text-sm"><a class="text-glorya-lightGold" href="https://wa.me/6287894415426" target="_blank" rel="noopener noreferrer">0878-9441-5426</a><a class="text-glorya-soft" href="https://www.instagram.com/gloryamassage" target="_blank" rel="noopener noreferrer">Instagram · @gloryamassage</a><a class="text-glorya-soft" href="https://x.com/gloryamassge" target="_blank" rel="noopener noreferrer">X · @gloryamassge</a><a class="text-glorya-soft" href="https://maps.app.goo.gl/NSLew74BQNMrm9rFA" target="_blank" rel="noopener noreferrer">Google Maps</a></div></div>
       </div>

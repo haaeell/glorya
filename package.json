@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "Landing page Glorya Massage",
   "scripts": {
-    "build:css": "tailwindcss -i ./assets/css/tailwind-input.css -o ./assets/css/tailwind.css --minify",
+    "build:css": "tailwindcss -i ./assets/css/tailwind-input.css -o ./assets/css/tailwind.css --minify && node -e \"const fs=require('fs');fs.writeFileSync('assets/css/site.css',fs.readFileSync('assets/css/tailwind.css','utf8')+'\\n'+fs.readFileSync('assets/css/custom.css','utf8'))\"",
     "watch:css": "tailwindcss -i ./assets/css/tailwind-input.css -o ./assets/css/tailwind.css --watch"
   },
   "devDependencies": {
