@@ -4,10 +4,12 @@
   "version": "1.0.0",
   "description": "Landing page Glorya Massage",
   "scripts": {
-    "build:css": "tailwindcss -i ./assets/css/tailwind-input.css -o ./assets/css/tailwind.css --minify && node -e \"const fs=require('fs');fs.writeFileSync('assets/css/site.css',fs.readFileSync('assets/css/tailwind.css','utf8')+'\\n'+fs.readFileSync('assets/css/custom.css','utf8'))\"",
-    "watch:css": "tailwindcss -i ./assets/css/tailwind-input.css -o ./assets/css/tailwind.css --watch"
+    "build:css": "tailwindcss -i ./assets/css/tailwind-input.css -o ./assets/css/tailwind.css --minify && node -e \"const fs=require('fs');fs.writeFileSync('assets/css/site.css',fs.readFileSync('assets/css/custom.css','utf8')+'\\n'+fs.readFileSync('assets/css/tailwind.css','utf8'))\"",
+    "watch:css": "tailwindcss -i ./assets/css/tailwind-input.css -o ./assets/css/tailwind.css --watch",
+    "build:critical": "npm run build:css && node scripts/gen-critical.mjs"
   },
   "devDependencies": {
+    "critical": "^8.0.0",
     "tailwindcss": "3.4.19"
   }
 }
