@@ -3,8 +3,8 @@
 ## Aset aktif
 
 - `logo-glorya.png` — logo resmi Glorya Massage.
-- `favicon.ico` — favicon utama untuk browser.
-- `favicon-96x96.png` — favicon PNG untuk browser dan Google Search.
+- `favicon.ico` (di root situs) — favicon utama untuk browser, berisi 32×32 dan 16×16.
+- `favicon-32x32.png` dan `favicon-16x16.png` — favicon PNG untuk browser dan Google Search.
 - `apple-touch-icon.png` — ikon perangkat Apple berukuran 180 × 180 px.
 - `icon-192.png` dan `icon-512.png` — ikon web manifest.
 - `hero-glorya.webp` — gambar utama hero berukuran 1586 × 992 px.
